@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _loa
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LoadPage\": () => (/* binding */ LoadPage),\n/* harmony export */   \"LoadFooter\": () => (/* binding */ LoadFooter)\n/* harmony export */ });\nfunction LoadPage() {\n    let header = document.createElement('h1');\n    header.innerHTML = \"Tony's Bistro & Bar\";\n    let content = document.getElementById(\"content\");\n    content.appendChild(header);\n    let copy = document.createElement('p');\n    copy.innerHTML = \"No booleans, only Berninis.\";\n    content.appendChild(copy);\n    let myImage = document.createElement(\"img\");\n    myImage.src = \"./assets/restaurant-helena-lopes-696218.jpg\";\n    myImage.style = \"width: 50vw; height: auto;\";\n    content.appendChild(myImage);\n    let credits = document.createElement('p');\n    credits.innerText = `Photo by `;\n    let temp_span = document.createElement('span');\n    let link = document.createElement('a');\n    link.href = \"https://www.pexels.com/photo/people-drinking-liquor-and-talking-on-dining-table-close-up-photo-696218/\";\n    link.target = '_blank';\n    link.innerHTML = \"Helena Lopes on Pexels\";\n    temp_span.appendChild(link);\n    credits.appendChild(temp_span);\n    content.appendChild(credits);\n    return;\n}\n\nfunction LoadFooter() {\n    let footer = document.createElement('footer');\n    footer.innerText = `Coded and styled by `;\n    let temp_span = document.createElement('span');\n    let link = document.createElement('a');\n    link.href = \"https://github.com/28r\";\n    link.target = '_blank';\n    link.rel = 'noopener noreferrer';\n    link.innerHTML = \"Antônio Moraes\";\n    temp_span.appendChild(link);\n    footer.appendChild(temp_span);\n    let temp_span2 = document.createElement('span');\n    temp_span2.innerHTML = \" &copy; 2022\";\n    footer.appendChild(temp_span2);\n    footer.classList.add('footer');\n    document.body.appendChild(footer);\n    return;\n}\n\n//# sourceURL=webpack://odin-restaurant/./src/loadpage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LoadPage\": () => (/* binding */ LoadPage),\n/* harmony export */   \"LoadFooter\": () => (/* binding */ LoadFooter)\n/* harmony export */ });\n/* harmony import */ var _restaurant_helena_lopes_696218_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./restaurant-helena-lopes-696218.jpg */ \"./src/restaurant-helena-lopes-696218.jpg\");\n\n\nfunction LoadPage() {\n    let header = document.createElement('h1');\n    header.innerHTML = \"Tony's Bistro & Bar\";\n    let content = document.getElementById(\"content\");\n    content.appendChild(header);\n    let copy = document.createElement('p');\n    copy.innerHTML = \"No booleans, only Berninis.\";\n    content.appendChild(copy);\n    let myImage = document.createElement(\"img\");\n    myImage.src = _restaurant_helena_lopes_696218_jpg__WEBPACK_IMPORTED_MODULE_0__;\n    myImage.style = \"width: 50vw; height: auto;\";\n    content.appendChild(myImage);\n    let credits = document.createElement('p');\n    credits.innerText = `Photo by `;\n    let temp_span = document.createElement('span');\n    let link = document.createElement('a');\n    link.href = \"https://www.pexels.com/photo/people-drinking-liquor-and-talking-on-dining-table-close-up-photo-696218/\";\n    link.target = '_blank';\n    link.innerHTML = \"Helena Lopes on Pexels\";\n    temp_span.appendChild(link);\n    credits.appendChild(temp_span);\n    content.appendChild(credits);\n    return;\n}\n\nfunction LoadFooter() {\n    let footer = document.createElement('footer');\n    footer.innerText = `Coded and styled by `;\n    let temp_span = document.createElement('span');\n    let link = document.createElement('a');\n    link.href = \"https://github.com/28r\";\n    link.target = '_blank';\n    link.rel = 'noopener noreferrer';\n    link.innerHTML = \"Antônio Moraes\";\n    temp_span.appendChild(link);\n    footer.appendChild(temp_span);\n    let temp_span2 = document.createElement('span');\n    temp_span2.innerHTML = \" &copy; 2022\";\n    footer.appendChild(temp_span2);\n    footer.classList.add('footer');\n    document.body.appendChild(footer);\n    return;\n}\n\n//# sourceURL=webpack://odin-restaurant/./src/loadpage.js?");
 
 /***/ }),
 
@@ -37,6 +37,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LoadContact\": () => (/* binding */ LoadContact),\n/* harmony export */   \"LoadMenu\": () => (/* binding */ LoadMenu),\n/* harmony export */   \"LoadHomePage\": () => (/* binding */ LoadHomePage)\n/* harmony export */ });\n/* harmony import */ var _loadpage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loadpage.js */ \"./src/loadpage.js\");\n\n\nlet content = document.getElementById(\"content\");\n\nfunction LoadContact() {\n    content.innerHTML = \"\";\n    let p = document.createElement('p');\n    p.innerHTML = 'Feel free to contact us for any business inquiries at'\n    p.classList.add('phonenumber');\n    content.appendChild(p);\n    let h2 = document.createElement('h2');\n    h2.innerHTML = '+1 617-495-1000';\n    content.appendChild(h2);\n    return;\n}\n\nfunction LoadMenu() {\n    content.innerHTML = \"\";\n    let ul = document.createElement('ul');\n    let li = [];\n    let innerHTML = [\"Strawberry Bernini, $5.50\", \"Grapefruit Bernini, $6.50\", \"Blueberry Bagel, $2.50\", \"Aperol Spritz, $3.50\", \"Açaí com Banana, $6.50\", \"Misugaru, $3.50\", \"Club Soda, $1.50\"]\n    for (let i = 0; i < 7; i++) {\n        li[i] = document.createElement('li');\n        li[i].innerHTML = innerHTML[i];\n        ul.appendChild(li[i]);\n    }\n    ul.classList.add('menulist');\n    content.appendChild(ul);\n    return;\n}\n\nfunction LoadHomePage() {\n    content.innerHTML = \"\";\n    (0,_loadpage_js__WEBPACK_IMPORTED_MODULE_0__.LoadPage)();\n    return;\n}\n\n//# sourceURL=webpack://odin-restaurant/./src/loadtabs.js?");
+
+/***/ }),
+
+/***/ "./src/restaurant-helena-lopes-696218.jpg":
+/*!************************************************!*\
+  !*** ./src/restaurant-helena-lopes-696218.jpg ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"57850ea5d1956803757e.jpg\";\n\n//# sourceURL=webpack://odin-restaurant/./src/restaurant-helena-lopes-696218.jpg?");
 
 /***/ })
 
@@ -79,6 +89,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -93,6 +115,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

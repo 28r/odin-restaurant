@@ -1,3 +1,5 @@
+import Berninis from "./restaurant-helena-lopes-696218.jpg";
+
 export function LoadPage() {
     let header = document.createElement('h1');
     header.innerHTML = "Tony's Bistro & Bar";
@@ -7,7 +9,7 @@ export function LoadPage() {
     copy.innerHTML = "No booleans, only Berninis.";
     content.appendChild(copy);
     let myImage = document.createElement("img");
-    myImage.src = "./assets/restaurant-helena-lopes-696218.jpg";
+    myImage.src = Berninis;
     myImage.style = "width: 50vw; height: auto;";
     content.appendChild(myImage);
     let credits = document.createElement('p');
