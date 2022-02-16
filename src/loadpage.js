@@ -7,7 +7,7 @@ export function LoadPage() {
     copy.innerHTML = "No booleans, only Berninis.";
     content.appendChild(copy);
     let myImage = document.createElement("img");
-    myImage.src = "../dist/assets/restaurant-helena-lopes-696218.jpg";
+    myImage.src = "./assets/restaurant-helena-lopes-696218.jpg";
     myImage.style = "width: 50vw; height: auto;";
     content.appendChild(myImage);
     let credits = document.createElement('p');
